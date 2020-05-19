@@ -3,7 +3,10 @@ import { crear } from './todo.actions';
 import { Todo } from './models/todo.model';
 
 export const estadoInicial: Todo[] = [
-  new Todo('Salvar al mundo')
+  new Todo('Salvar al mundo'),
+  new Todo('Salvar al mundo 2'),
+  new Todo('Salvar al mundo 3'),
+  new Todo('Salvar al mundo 4'),
 ];
 
 // tslint:disable-next-line: variable-name
