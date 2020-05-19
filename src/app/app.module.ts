@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
+// reducers
 import { todoReducer } from './todos/todo.reducer';
 
 import { AppComponent } from './app.component';
@@ -24,7 +25,7 @@ import { environment } from '../environments/environment';
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
-    }),
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
