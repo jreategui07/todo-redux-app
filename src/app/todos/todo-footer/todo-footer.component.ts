@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../app.reducer';
 import * as actions from '../../filtro/filtro.actions';
+import { limpiarTodos } from '../todo.actions';
 
 @Component({
   selector: 'app-todo-footer',
@@ -27,13 +28,16 @@ export class TodoFooterComponent implements OnInit {
       // actualizamos conteo de tareas pendientes
       this.pendientes = state.todos.filter(todo => !todo.completado).length;
     });
-
   }
 
   cambiarFiltro(filtro: actions.FiltrosValidos): void {
     this.store.dispatch(actions.setFiltro({
       filtro
     }));
+  }
+
+  limpiarCompletados(): void {
+    this.store.dispatch(limpiarTodos());
   }
 
 }
