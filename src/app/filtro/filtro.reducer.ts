@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 import { setFiltro, FiltrosValidos } from './filtro.actions';
 
-export const initialState: FiltrosValidos = 'Todos';
+export const initialState: FiltrosValidos = 'todos';
 
 // tslint:disable-next-line: variable-name
 const _filtroReducer = createReducer(initialState,

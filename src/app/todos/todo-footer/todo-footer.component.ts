@@ -10,8 +10,8 @@ import * as actions from '../../filtro/filtro.actions';
 })
 export class TodoFooterComponent implements OnInit {
 
-  filtroActual: actions.FiltrosValidos = 'Todos';
-  filtros: actions.FiltrosValidos[] = ['Todos', 'Pendientes', 'Completados'];
+  filtroActual: actions.FiltrosValidos = 'todos';
+  filtros: actions.FiltrosValidos[] = ['todos', 'pendientes', 'completados'];
 
   constructor(
     private store: Store<AppState>
